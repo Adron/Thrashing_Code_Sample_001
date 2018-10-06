@@ -2,7 +2,6 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
 	"io/ioutil"
 	"log"
 	"os"
@@ -10,34 +9,24 @@ import (
 	"strconv"
 )
 
-type userInformationTest struct {
-	Name string
-	UserId		int64
-	GroupId		int64
-	HomeDir	string
-	UserName string
-	GroupIds []string
-	GoPath string
-	EnvVar string
-}
-type userInformation struct {
-	Name string `json:"name"`
-	UserId		int64 `json:"userid"`
-	GroupId		int64 `json:"groupid"`
-	HomeDir	string `json:"homedir"`
-	UserName string `json:"username"`
+type UserInformation struct {
+	Name     string   `json:"name"`
+	UserId   int64    `json:"userid"`
+	GroupId  int64    `json:"groupid"`
+	HomeDir  string   `json:"homedir"`
+	UserName string   `json:"username"`
 	GroupIds []string `json:"groupids"`
-	GoPath string `json:"gopath"`
-	EnvVar string `json:"environmentvariable""`
+	GoPath   string   `json:"gopath"`
+	EnvVar   string   `json:"environmentvariable""`
 }
 
 func main() {
 	currentUser, err := user.Current()
 	check(err)
-	funcName(currentUser)
+	changeDataForMarshalling(currentUser)
 }
 
-func funcName(currentUser *user.User) {
+func changeDataForMarshalling(currentUser *user.User) {
 	groupsIds, err := currentUser.GroupIds()
 	check(err)
 	userId, err := strconv.ParseInt(currentUser.Uid, 6, 64)
@@ -45,33 +34,43 @@ func funcName(currentUser *user.User) {
 	groupId, err := strconv.ParseInt(currentUser.Gid, 6, 64)
 	check(err)
 
-	res1D := &userInformation{
-		Name:   currentUser.Name,
-		UserId: userId,
-		GroupId: groupId,
-		HomeDir: currentUser.HomeDir,
+	workingUserInformation := &UserInformation{
+		Name:     currentUser.Name,
+		UserId:   userId,
+		GroupId:  groupId,
+		HomeDir:  currentUser.HomeDir,
 		UserName: currentUser.Username,
 		GroupIds: groupsIds,
-		GoPath: os.Getenv("GOPATH"),
-		EnvVar: os.Getenv("NEW_STRING_ENVIRONMENT_VARIABLE"),
+		GoPath:   os.Getenv("GOPATH"),
+		EnvVar:   os.Getenv("NEW_STRING_ENVIRONMENT_VARIABLE"),
 	}
-	res1B, _ := json.Marshal(res1D)
-	fmt.Println(string(res1B))
 
-	filename := "collected_values.txt"
+	resultingUserInformation, _ := json.Marshal(workingUserInformation)
+
+	filename := "collected_values.json"
 	if _, err := os.Stat(filename); os.IsNotExist(err) {
-		textFileContent := []byte("File created.\n")
-		err := ioutil.WriteFile(filename, textFileContent, 0644)
-		check(err)
-
-		appendFileContents(err, filename, "File didn't exist, created, and append this.\n")
+		writeFileContents(err, filename, string(resultingUserInformation))
 	} else {
-		appendFileContents(err, filename, "File existed, adding these contents.\n")
+		newUserInformation, err := openFileMakeChanges(filename)
+		writeFileContents(err, filename, newUserInformation)
 	}
 }
 
-func appendFileContents(err error, filename string, text string) {
-	f, err := os.OpenFile(filename, os.O_APPEND|os.O_WRONLY, 0600)
+func openFileMakeChanges(filename string) (string, error) {
+	jsonFile, err := os.Open(filename)
+	check(err)
+	defer jsonFile.Close()
+	var changingUserInformation UserInformation
+	byteValue, _ := ioutil.ReadAll(jsonFile)
+	json.Unmarshal(byteValue, &changingUserInformation)
+	changingUserInformation.Name = "Adron Hall"
+	changingUserInformation.GoPath = "/where/is/the/goland"
+	newUserInformation, _ := json.Marshal(changingUserInformation)
+	return string(newUserInformation), err
+}
+
+func writeFileContents(err error, filename string, text string) {
+	f, err := os.OpenFile(filename, os.O_CREATE|os.O_WRONLY, 0600)
 	check(err)
 	defer f.Close()
 
