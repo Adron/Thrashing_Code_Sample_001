@@ -31,7 +31,7 @@ During this time I fight a lot with the permissions, how to set it, whether to u
 
 <a  href="/watch?v=sg4Nnnb-Vvc&amp;t=6466s">1:47:46</a> - Now I add a file exists check and start working on that logic.
 
-<a  href="/watch?v=sg4Nnnb-Vvc&amp;t=6536s">1:48:56</a> - Props to Edd Turtle on a solid site on Go. Here's the blog entry, and respectively the path to more of Edd's material <a  href="/redirect?redir_token=VlwYfvtVnNvI1KzNl7Atg4Gvp018MTUzOTAzNDcyN0AxNTM4OTQ4MzI3&amp;v=sg4Nnnb-Vvc&amp;q=https%3A%2F%2Fgolangcode.com%2Fcheck-if-a-file-exists%2F&amp;event=video_description" rel="nofollow">https://golangcode.com/check-if-a-fil...</a>. Also, Edd seems like a good guy to follow <a  href="/redirect?redir_token=VlwYfvtVnNvI1KzNl7Atg4Gvp018MTUzOTAzNDcyN0AxNTM4OTQ4MzI3&amp;v=sg4Nnnb-Vvc&amp;q=https%3A%2F%2Ftwitter.com%2Feddturtle&amp;event=video_description" rel="nofollow">https://twitter.com/eddturtle</a>.
+<a  href="/watch?v=sg4Nnnb-Vvc&amp;t=6536s">1:48:56</a> - Props to Edd Turtle on a solid site on Go. Here's the blog entry, and respectively the path to more of Edd's material @ https://golangcode.com/. Also, Edd seems like a good guy to follow [@eddturtule](https://twitter.com/eddturtle).
 
 <a  href="/watch?v=sg4Nnnb-Vvc&amp;t=7293s">2:01:33</a> - Starting the JSON Work here to marshal and unmarshall.
 
