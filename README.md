@@ -4,7 +4,7 @@ I put together this project in recent [video stream starting at 1:32:40](https:/
 
 Here's the time slices with respective topics to check out:
 
-<a class="yt-simple-endpoint style-scope yt-formatted-string" spellcheck="false" href="/watch?v=sg4Nnnb-Vvc&amp;t=10s">0:10</a> - Music Intro.
+* <a class="yt-simple-endpoint style-scope yt-formatted-string" spellcheck="false" href="/watch?v=sg4Nnnb-Vvc&amp;t=10s">0:10</a> - Music Intro.
 
 <a class="yt-simple-endpoint style-scope yt-formatted-string" spellcheck="false" href="/watch?v=sg4Nnnb-Vvc&amp;t=184s">3:04</a> - Introduction, recovering from it being morning on a Saturday, coffee, and getting some environment settings fixed.
 
