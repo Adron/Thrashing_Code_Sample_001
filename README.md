@@ -19,6 +19,7 @@ Here's the time slices with respective topics to check out:
 <a  href="/watch?v=sg4Nnnb-Vvc&amp;t=1700s">28:20</a> - I opt to start working on the `colligere config create` command to start fleshing out what needs to be set for JSON and written to file.
 
 During this time I fight a lot with the permissions, how to set it, whether to use the const variables or pass the acual four digit permission code. In the end I finally end up just passing the 4 digits to create the directory and file. I also start using the Go user library and it's objects to pull user information for the project.
+
 <a  href="/watch?v=sg4Nnnb-Vvc&amp;t=4855s">1:20:55</a> Thrashing Code Episode 3 &amp; bio break.
 
 <a  href="/watch?v=sg4Nnnb-Vvc&amp;t=5560s">1:32:40</a> - Creating a new application with Jetbrains Goland to show off how to use the Go core libraries around the user, JSON, and some basic file creation and writing.
