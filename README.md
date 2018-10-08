@@ -2,25 +2,7 @@
 
 I put together this project in recent [video stream starting at 1:32:40](https://youtu.be/sg4Nnnb-Vvc?t=5560).
 
-Here's the time slices with respective topics to check out:
-
-<a  href="https://youtu.be/sg4Nnnb-Vvc?t=10s">0:10</a> - Music Intro.
-
-<a  href="https://youtu.be/sg4Nnnb-Vvc?t=184s">3:04</a> - Introduction, recovering from it being morning on a Saturday, coffee, and getting some environment settings fixed.
-
-<a  href="https://youtu.be/sg4Nnnb-Vvc?t=345s">5:45</a> - Reviewing what has been done up to this point with Colligere.
-
-<a  href="https://youtu.be/sg4Nnnb-Vvc?t=460s">7:40</a> - Stating objectives for the day. Working on getting started with the schema file for the project.
-
-<a  href="https://youtu.be/sg4Nnnb-Vvc?t=675s">11:15</a> - Going over what we get when adding commands to a Cobra CLI. Where I re-stumble upon the fact I wrote out the commands as nested to the config sub-command. i.e. `colligere config set` and `colligere config create` etc. During this section I also go ahead and step through the Go lint output problem list and resolve the items.
-
-<a  href="https://youtu.be/sg4Nnnb-Vvc?t=1390s">23:10</a> - I run into a situation where Visual Studio Code has gotten out of sync with the Go Libs that are actually loaded in the Vendor directory, but I delete the directory, run `dep ensure` again and realizing it is just going to stay out of sync (anybody got a solution to this?) continue onward. But it's fascinating and helpful to know that this happens.
-
-<a  href="https://youtu.be/sg4Nnnb-Vvc?t=1700s">28:20</a> - I opt to start working on the `colligere config create` command to start fleshing out what needs to be set for JSON and written to file.
-
-During this time I fight a lot with the permissions, how to set it, whether to use the const variables or pass the acual four digit permission code. In the end I finally end up just passing the 4 digits to create the directory and file. I also start using the Go user library and it's objects to pull user information for the project.
-
-<a  href="https://youtu.be/sg4Nnnb-Vvc?t=4855s">1:20:55</a> Thrashing Code Episode 3 &amp; bio break.
+Here's the time slices with respective topics pertinent to this repo, for the full video head over to youtube to watch it.
 
 <a  href="https://youtu.be/sg4Nnnb-Vvc?t=5560s">1:32:40</a> - Creating a new application with Jetbrains Goland to show off how to use the Go core libraries around the user, JSON, and some basic file creation and writing.
 
