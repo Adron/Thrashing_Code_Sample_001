@@ -17,7 +17,7 @@ type UserInformation struct {
 	UserName string   `json:"username"`
 	GroupIds []string `json:"groupids"`
 	GoPath   string   `json:"gopath"`
-	EnvVar   string   `json:"environmentvariable""`
+	EnvVar   string   `json:"environmentvariable"`
 }
 
 func main() {
