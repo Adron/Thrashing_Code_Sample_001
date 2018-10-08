@@ -1,4 +1,4 @@
-# Thrashing Code Repo X
+# Thrashing Code Repo 1
 
 I put together this project in recent [video stream starting at 1:32:40](https://youtu.be/sg4Nnnb-Vvc?t=5560).
 
